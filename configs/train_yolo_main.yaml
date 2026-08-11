@@ -1,0 +1,36 @@
+# Phase 3 - Main production detector (transfer learning)
+# Strongest stable YOLO variant that fits Kaggle T4/P100 comfortably.
+# Swap `model` to yolov8l.pt / yolo11l.pt only if the GPU allows.
+experiment_name: yolo_main
+model: yolov8m.pt          # main recommendation (accuracy/speed/memory balance)
+
+imgsz: 640
+epochs: 200
+batch: 16                  # reduce to 8 (+ set nbs:64 for grad accumulation) if OOM
+patience: 40
+optimizer: auto
+lr0: 0.01
+lrf: 0.01
+cos_lr: true
+warmup_epochs: 5
+weight_decay: 0.0005
+amp: true
+seed: 42
+deterministic: true
+
+# Slightly richer augmentation for robustness across environments/lighting
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+fliplr: 0.5
+flipud: 0.0
+mosaic: 1.0
+close_mosaic: 15
+mixup: 0.1
+erasing: 0.2               # random erasing for occlusion robustness
+
+save_period: -1            # runs always land under outputs/weights/<experiment_name>
+plots: true

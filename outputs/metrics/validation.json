@@ -1,0 +1,67 @@
+{
+  "data_root": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data",
+  "splits": {
+    "train": {
+      "split": "train",
+      "images_dir": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data\\train\\images",
+      "labels_dir": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data\\train\\labels",
+      "n_images": 1502,
+      "n_negatives": 678,
+      "n_boxes": 1763,
+      "class_box_counts": {
+        "smoke": 831,
+        "fire": 932
+      },
+      "errors": [],
+      "fixable": [
+        "WEB04243.txt: line 5 [fixable]: non-positive size (w=0.0, h=0.0) -> will be dropped"
+      ],
+      "warnings": []
+    },
+    "val": {
+      "split": "val",
+      "images_dir": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data\\val\\images",
+      "labels_dir": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data\\val\\labels",
+      "n_images": 1505,
+      "n_negatives": 679,
+      "n_boxes": 1813,
+      "class_box_counts": {
+        "smoke": 836,
+        "fire": 977
+      },
+      "errors": [],
+      "fixable": [],
+      "warnings": []
+    },
+    "test": {
+      "split": "test",
+      "images_dir": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data\\test\\images",
+      "labels_dir": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data\\test\\labels",
+      "n_images": 1428,
+      "n_negatives": 655,
+      "n_boxes": 1745,
+      "class_box_counts": {
+        "smoke": 769,
+        "fire": 976
+      },
+      "errors": [],
+      "fixable": [
+        "AoF07743.txt: line 3 [fixable]: non-positive size (w=0.0, h=0.0) -> will be dropped",
+        "WEB10769.txt: line 2 [fixable]: size exceeds image (w=1.0296875, h=0.7083333333333334) -> will be clipped",
+        "WEB10821.txt: line 3 [fixable]: size exceeds image (w=1.0093750000000001, h=0.6166666666666667) -> will be clipped"
+      ],
+      "warnings": []
+    }
+  },
+  "totals": {
+    "images": 4435,
+    "negatives": 2012,
+    "boxes": 5321,
+    "class_box_counts": {
+      "smoke": 2436,
+      "fire": 2885
+    },
+    "n_errors": 0,
+    "n_fixable": 4
+  }
+}

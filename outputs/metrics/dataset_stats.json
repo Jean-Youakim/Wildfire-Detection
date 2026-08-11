@@ -1,0 +1,141 @@
+{
+  "data_root": "C:\\Users\\UserPc\\OneDrive\\Desktop\\Projects\\WildFire Detection\\data",
+  "per_split": {
+    "train": {
+      "n_images": 1502,
+      "categories": {
+        "none": 678,
+        "smoke_only": 423,
+        "fire_only": 84,
+        "fire_and_smoke": 317
+      },
+      "class_box_counts": {
+        "smoke": 831,
+        "fire": 932
+      },
+      "area_buckets": {
+        "smoke": {
+          "small": 164,
+          "medium": 171,
+          "large": 496
+        },
+        "fire": {
+          "small": 596,
+          "medium": 266,
+          "large": 70
+        }
+      },
+      "boxes_per_image": {
+        "max": 21,
+        "mean": 1.174,
+        "histogram": {
+          "0": 678,
+          "1": 448,
+          "2": 147,
+          "3-5": 181,
+          "6-10": 45,
+          ">10": 3
+        }
+      }
+    },
+    "val": {
+      "n_images": 1505,
+      "categories": {
+        "none": 679,
+        "smoke_only": 423,
+        "fire_only": 85,
+        "fire_and_smoke": 318
+      },
+      "class_box_counts": {
+        "smoke": 836,
+        "fire": 977
+      },
+      "area_buckets": {
+        "smoke": {
+          "small": 144,
+          "medium": 211,
+          "large": 481
+        },
+        "fire": {
+          "small": 625,
+          "medium": 287,
+          "large": 65
+        }
+      },
+      "boxes_per_image": {
+        "max": 14,
+        "mean": 1.205,
+        "histogram": {
+          "0": 679,
+          "1": 440,
+          "2": 151,
+          "3-5": 180,
+          "6-10": 52,
+          ">10": 3
+        }
+      }
+    },
+    "test": {
+      "n_images": 1428,
+      "categories": {
+        "none": 655,
+        "smoke_only": 393,
+        "fire_only": 73,
+        "fire_and_smoke": 307
+      },
+      "class_box_counts": {
+        "smoke": 769,
+        "fire": 976
+      },
+      "area_buckets": {
+        "smoke": {
+          "small": 151,
+          "medium": 172,
+          "large": 446
+        },
+        "fire": {
+          "small": 641,
+          "medium": 280,
+          "large": 55
+        }
+      },
+      "boxes_per_image": {
+        "max": 23,
+        "mean": 1.222,
+        "histogram": {
+          "0": 655,
+          "1": 404,
+          "2": 148,
+          "3-5": 169,
+          "6-10": 46,
+          ">10": 6
+        }
+      }
+    }
+  },
+  "totals": {
+    "n_images": 4435,
+    "categories": {
+      "none": 2012,
+      "smoke_only": 1239,
+      "fire_only": 242,
+      "fire_and_smoke": 942
+    },
+    "class_box_counts": {
+      "smoke": 2436,
+      "fire": 2885
+    },
+    "area_buckets": {
+      "smoke": {
+        "small": 459,
+        "medium": 554,
+        "large": 1423
+      },
+      "fire": {
+        "small": 1862,
+        "medium": 833,
+        "large": 190
+      }
+    }
+  }
+}

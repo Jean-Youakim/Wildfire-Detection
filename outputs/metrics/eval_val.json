@@ -1,0 +1,112 @@
+{
+  "weights": "/kaggle/working/wildfire/outputs/weights/yolo_main/weights/best.pt",
+  "split": "val",
+  "imgsz": 640,
+  "iou": 0.6,
+  "detection": {
+    "map50_95": 0.47132942475912615,
+    "map50": 0.8016523767463106,
+    "map75": 0.48094072090261075,
+    "mean_precision": 0.7988454310893834,
+    "mean_recall": 0.7434573060431462,
+    "per_class_ap50_95": {
+      "smoke": 0.5373238596645856,
+      "fire": 0.4053349898536669
+    }
+  },
+  "image_level": {
+    "per_class": {
+      "smoke": {
+        "roc_auc": 0.9874757908327952,
+        "pr_auc": 0.9718836644392175,
+        "precision": 0.9463840399002493,
+        "recall": 0.9793548387096774,
+        "f1": 0.9625871908687381,
+        "support_positive": 1550
+      },
+      "fire": {
+        "roc_auc": 0.9950985968904058,
+        "pr_auc": 0.9897343852735764,
+        "precision": 0.9626274065685164,
+        "recall": 0.9670079635949943,
+        "f1": 0.9648127128263337,
+        "support_positive": 879
+      }
+    },
+    "alert": {
+      "roc_auc": 0.9976456443788231,
+      "pr_auc": 0.9981374236330771,
+      "precision": 0.9787478460654796,
+      "recall": 0.988399071925754,
+      "f1": 0.9835497835497835,
+      "support_positive": 1724,
+      "n_images": 3099
+    },
+    "thresholds": {
+      "smoke": 0.15,
+      "fire": 0.25
+    }
+  },
+  "category_confusion": {
+    "labels": [
+      "none",
+      "smoke_only",
+      "fire_only",
+      "fire_and_smoke"
+    ],
+    "matrix": [
+      [
+        1338,
+        36,
+        1,
+        0
+      ],
+      [
+        17,
+        796,
+        0,
+        32
+      ],
+      [
+        2,
+        4,
+        122,
+        46
+      ],
+      [
+        1,
+        22,
+        14,
+        668
+      ]
+    ],
+    "accuracy": 0.9435301710229106
+  },
+  "calibration": {
+    "ece": 0.12686286637151273,
+    "reliability_figure": "/kaggle/working/wildfire/outputs/figures/val_alert_reliability.png",
+    "histogram_figure": "/kaggle/working/wildfire/outputs/figures/val_alert_score_hist.png"
+  },
+  "thresholds_used": {
+    "smoke": 0.15,
+    "fire": 0.25
+  },
+  "thresholds_tuned": {
+    "smoke": 0.15,
+    "fire": 0.25
+  },
+  "operating_points": {
+    "high_recall": {
+      "smoke": 0.1,
+      "fire": 0.1
+    },
+    "balanced": {
+      "smoke": 0.25,
+      "fire": 0.25
+    },
+    "high_precision": {
+      "smoke": 0.5,
+      "fire": 0.5
+    }
+  }
+}

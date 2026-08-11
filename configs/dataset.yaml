@@ -1,0 +1,31 @@
+# D-Fire dataset configuration (Ultralytics-compatible)
+# -----------------------------------------------------------------------------
+# IMPORTANT — class order:
+#   The official D-Fire annotation convention is:
+#       0 -> smoke
+#       1 -> fire
+#   This was verified against both the label files and the dataset spec.
+#   Do NOT swap these; the labels on disk use this exact mapping.
+# -----------------------------------------------------------------------------
+#
+# `path` is the dataset ROOT. It is intentionally relative here so the repo is
+# portable. The training/evaluation scripts resolve it to an absolute path at
+# runtime (via --data-root or auto-detection for local vs. Kaggle), and write a
+# fully-resolved copy to outputs/ for Ultralytics to consume.
+#
+# Expected layout under `path`:
+#   <path>/train/images/*.jpg   <path>/train/labels/*.txt
+#   <path>/val/images/*.jpg     <path>/val/labels/*.txt
+#   <path>/test/images/*.jpg    <path>/test/labels/*.txt
+#
+# Negative images (no fire/smoke) have an empty .txt file or no .txt file; both
+# are handled correctly by Ultralytics and by this project's tooling.
+
+path: data
+train: train/images
+val: val/images
+test: test/images
+
+names:
+  0: smoke
+  1: fire

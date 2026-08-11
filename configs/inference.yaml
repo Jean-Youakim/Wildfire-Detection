@@ -1,0 +1,34 @@
+# Inference / deployment configuration
+# Confidence thresholds are per-class because smoke and fire behave differently
+# (smoke is often larger/fainter; fire is often small/bright).
+#
+# Operating modes (see reports/model_card.md for how these are chosen from the
+# validation PR curves):
+#   - high_recall : catch as much as possible (early warning); more false alarms
+#   - balanced    : default deployment trade-off
+#   - high_precision : minimize false alarms; may miss faint/small events
+
+weights: outputs/weights/yolo_main/weights/best.pt
+imgsz: 640
+device: null               # null -> auto (cuda if available else cpu)
+iou: 0.6                   # NMS IoU threshold
+max_det: 300
+agnostic_nms: false
+
+# Per-class confidence thresholds for the default (balanced) mode.
+# Tune these with src/evaluation/evaluate_detector.py --tune-thresholds.
+conf:
+  smoke: 0.25
+  fire: 0.25
+
+# Named operating points (class-wise conf). Selected on validation, reported on test.
+modes:
+  high_recall:
+    smoke: 0.10
+    fire: 0.10
+  balanced:
+    smoke: 0.25
+    fire: 0.25
+  high_precision:
+    smoke: 0.50
+    fire: 0.50

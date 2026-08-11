@@ -1,0 +1,109 @@
+{
+  "weights": "/kaggle/working/wildfire/outputs/weights/yolo_main/weights/best.pt",
+  "split": "test",
+  "imgsz": 640,
+  "iou": 0.6,
+  "detection": {
+    "map50_95": 0.45597458734464535,
+    "map50": 0.7946149688514944,
+    "map75": 0.44274400140679665,
+    "mean_precision": 0.7871456720093264,
+    "mean_recall": 0.7406333414858992,
+    "per_class_ap50_95": {
+      "smoke": 0.5280148571949089,
+      "fire": 0.38393431749438167
+    }
+  },
+  "image_level": {
+    "per_class": {
+      "smoke": {
+        "roc_auc": 0.9867771004648803,
+        "pr_auc": 0.9796912524999158,
+        "precision": 0.9578544061302682,
+        "recall": 0.9610764055742431,
+        "f1": 0.959462700887503,
+        "support_positive": 2081
+      },
+      "fire": {
+        "roc_auc": 0.9956853144985968,
+        "pr_auc": 0.9903485232446936,
+        "precision": 0.9607493309545049,
+        "recall": 0.9659192825112107,
+        "f1": 0.9633273703041145,
+        "support_positive": 1115
+      }
+    },
+    "alert": {
+      "roc_auc": 0.9953158173666224,
+      "pr_auc": 0.99603728781426,
+      "precision": 0.981675392670157,
+      "recall": 0.9778357235984355,
+      "f1": 0.9797517962116263,
+      "support_positive": 2301,
+      "n_images": 4306
+    },
+    "thresholds": {
+      "smoke": 0.25,
+      "fire": 0.25
+    }
+  },
+  "category_confusion": {
+    "labels": [
+      "none",
+      "smoke_only",
+      "fire_only",
+      "fire_and_smoke"
+    ],
+    "matrix": [
+      [
+        1963,
+        31,
+        10,
+        1
+      ],
+      [
+        49,
+        1104,
+        0,
+        33
+      ],
+      [
+        2,
+        7,
+        162,
+        49
+      ],
+      [
+        0,
+        29,
+        32,
+        834
+      ]
+    ],
+    "accuracy": 0.9435671156525778
+  },
+  "calibration": {
+    "ece": 0.1275217184063778,
+    "reliability_figure": "/kaggle/working/wildfire/outputs/figures/test_alert_reliability.png",
+    "histogram_figure": "/kaggle/working/wildfire/outputs/figures/test_alert_score_hist.png"
+  },
+  "thresholds_used": {
+    "smoke": 0.25,
+    "fire": 0.25
+  },
+  "thresholds_tuned": null,
+  "operating_points": {
+    "high_recall": {
+      "smoke": 0.1,
+      "fire": 0.1
+    },
+    "balanced": {
+      "smoke": 0.25,
+      "fire": 0.25
+    },
+    "high_precision": {
+      "smoke": 0.5,
+      "fire": 0.5
+    }
+  }
+}

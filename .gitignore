@@ -1,0 +1,42 @@
+# ---- Data (never commit the D-Fire dataset) ----
+data/raw/
+data/processed/
+data/**/images/
+data/**/labels/
+*.jpg
+*.jpeg
+*.png
+!reports/**/*.png
+!docs/**/*.png
+!outputs/figures/**/*.png
+
+# ---- Model weights & experiment outputs ----
+outputs/weights/
+outputs/predictions/
+runs/
+*.pt
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---- Tooling / editors ----
+.vscode/
+.idea/
+.DS_Store
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# ---- Experiment tracking ----
+wandb/
+mlruns/
+*.log
